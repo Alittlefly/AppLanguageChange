@@ -12,7 +12,7 @@
 		0463086322390A4C008E2FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0463086222390A4C008E2FBF /* Assets.xcassets */; };
 		0463086922390A4C008E2FBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463086822390A4C008E2FBF /* main.m */; };
 		0463087222390AB3008E2FBF /* FSSharedLanguages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463087122390AB3008E2FBF /* FSSharedLanguages.m */; };
-		0463087822390BA6008E2FBF /* LanguageChange.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0463087722390BA6008E2FBF /* LanguageChange.strings */; };
+		046308892239F8C2008E2FBF /* LanguageChange.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0463088B2239F8C2008E2FBF /* LanguageChange.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,9 @@
 		0463086822390A4C008E2FBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0463087022390AB2008E2FBF /* FSSharedLanguages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSharedLanguages.h; sourceTree = "<group>"; };
 		0463087122390AB3008E2FBF /* FSSharedLanguages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSharedLanguages.m; sourceTree = "<group>"; };
-		0463087722390BA6008E2FBF /* LanguageChange.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; path = LanguageChange.strings; sourceTree = "<group>"; };
+		0463088A2239F8C2008E2FBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LanguageChange.strings; sourceTree = "<group>"; };
+		0463088C2239F8CF008E2FBF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LanguageChange.strings; sourceTree = "<group>"; };
+		0463088D2239F8D6008E2FBF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LanguageChange.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,7 @@
 				0463085C22390A4B008E2FBF /* ViewController.h */,
 				0463085D22390A4B008E2FBF /* ViewController.m */,
 				0463086222390A4C008E2FBF /* Assets.xcassets */,
-				0463087722390BA6008E2FBF /* LanguageChange.strings */,
+				0463088B2239F8C2008E2FBF /* LanguageChange.strings */,
 				0463086722390A4C008E2FBF /* Info.plist */,
 				0463086822390A4C008E2FBF /* main.m */,
 			);
@@ -120,6 +122,10 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
+				Base,
+				fr,
+				"zh-Hans",
 			);
 			mainGroup = 0463084D22390A4B008E2FBF;
 			productRefGroup = 0463085722390A4B008E2FBF /* Products */;
@@ -136,7 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0463087822390BA6008E2FBF /* LanguageChange.strings in Resources */,
+				046308892239F8C2008E2FBF /* LanguageChange.strings in Resources */,
 				0463086322390A4C008E2FBF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +162,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0463088B2239F8C2008E2FBF /* LanguageChange.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0463088A2239F8C2008E2FBF /* en */,
+				0463088C2239F8CF008E2FBF /* fr */,
+				0463088D2239F8D6008E2FBF /* zh-Hans */,
+			);
+			name = LanguageChange.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0463086A22390A4C008E2FBF /* Debug */ = {
@@ -285,7 +304,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Gaochao.AppLanguageChange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +321,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Gaochao.AppLanguageChange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

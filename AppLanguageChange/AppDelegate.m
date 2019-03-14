@@ -18,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[FSSharedLanguages SharedLanguage] setTableName:@"LanguageChange"];
+    NSLog(@"%@",[FSSharedLanguages CustomLocalizedStringWithKey:@"keyaaa"]);
+      [[FSSharedLanguages SharedLanguage] setTableName:@"test"];
+    
+    NSLog(@"%@",FSSharedLanguages.SharedLanguage.tableName);
+    
     return YES;
 }
 
