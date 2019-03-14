@@ -1,7 +1,5 @@
 # AppLanguageChange
-
--
-
+---
 ### How to use?
 	pod 'LanguageChange'
 	
