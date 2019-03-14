@@ -1,11 +1,12 @@
 # AppLanguageChange
---
 
-###1. How to use?
+-
+
+### How to use?
 	pod 'LanguageChange'
 	
 
-###2. Demo Code
+### Demo Code
 
 - 设置table,table只能设置一次
 
@@ -20,13 +21,13 @@
 	NSString *value = [FSSharedLanguages CustomLocalizedStringWithKey:@"key"];
 ```
 
-###3. 其他方法
+### 其他方法
 - followSystem
 
 YES: 跟随系统当前的语言
 NO：自己设定
 
-###4. 读取特定的语言的value
+### 读取特定的语言的value
 
 ```
     NSLog(@"%@",[FSSharedLanguages CustomLocalizedStringWithKey:@"keyaaa" LanaguageType:FSSharedLanaguageTypeChinese]);
