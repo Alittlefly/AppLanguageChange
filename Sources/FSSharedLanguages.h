@@ -24,21 +24,10 @@
 + (NSString *)CustomLocalizedStringWithKey:(NSString *)key;
 
 // 取指定语言下的文案。
-+ (NSString *)CustomLocalizedStringWithKey:(NSString *)key LanaguageType:(NSString *)language;
-
-
-//当前使用的语言
-+ (NSString *)FS_AppUsedLanguage NS_UNAVAILABLE;
-//FullLangue
-+ (NSString *)FS_AppUsedFullLanguage NS_UNAVAILABLE;
-
-+ (NSString *)FS_AppLanguageId NS_UNAVAILABLE;
-
-+ (BOOL)systemIsArbicLanguage NS_UNAVAILABLE;
-// en_US
-+ (NSString *)localIdentifier NS_UNAVAILABLE;
++ (NSString *)CustomLocalizedStringWithKey:(NSString *)key LanguageType:(NSString *)language;
 
 @end
+
 FOUNDATION_EXPORT NSString * FSSharedLanaguageTypeChinese;
 FOUNDATION_EXPORT NSString * FSSharedLanaguageTypeEnglish;
 FOUNDATION_EXPORT NSString * FSSharedLanaguageTypeMalay;

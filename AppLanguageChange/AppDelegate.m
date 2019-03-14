@@ -24,6 +24,8 @@
     
     NSLog(@"%@",FSSharedLanguages.SharedLanguage.tableName);
     
+    NSLog(@"%@",[FSSharedLanguages CustomLocalizedStringWithKey:@"keyaaa" LanguageType:FSSharedLanaguageTypeChinese]);
+
     return YES;
 }
 

@@ -255,88 +255,8 @@ static FSSharedLanguages *staticLanguage;
 {
     return  [[FSSharedLanguages SharedLanguage] CustomLocalizedStringFromTable:key Comment:nil Table:[FSSharedLanguages SharedLanguage].tableName];
 }
-+ (NSString *)CustomLocalizedStringWithKey:(NSString *)key LanaguageType:(NSString *)language {
++ (NSString *)CustomLocalizedStringWithKey:(NSString *)key LanguageType:(NSString *)language {
     
     return  [[FSSharedLanguages SharedLanguage] localizeStringWithResourceName:language withKey:key table:[FSSharedLanguages SharedLanguage].tableName];
 }
-
-
-
-
-
-#pragma mark - NS_UNAVAILABLE
-+ (NSString *)FS_AppUsedLanguage //当前使用的语言
-{
-    return [[FSSharedLanguages SharedLanguage] language];
-}
-+ (NSString *)FS_AppUsedFullLanguage
-{
-    if ([[FSSharedLanguages SharedLanguage] followSystem]) {
-        return @"Auto";
-    }else
-    {
-        if ([[FSSharedLanguages FS_AppUsedLanguage] isEqualToString:FSSharedLanaguageTypeArabic]) {
-            return [FSSharedLanguages CustomLocalizedStringWithKey:@"عربي"];
-        }
-        else if ([[FSSharedLanguages FS_AppUsedLanguage] isEqualToString:FSSharedLanaguageTypeTurkey]) {
-            return [FSSharedLanguages CustomLocalizedStringWithKey:@"Türkçe"];
-        }
-        else
-        {
-            return @"English";
-        }
-    }
-}
-+ (NSString *)FS_AppLanguageId
-{
-    if ([[FSSharedLanguages SharedLanguage].language rangeOfString:FSSharedLanaguageTypeEnglish].location != NSNotFound)
-    {
-        return @"1";
-    }else if ([[FSSharedLanguages SharedLanguage].language rangeOfString:FSSharedLanaguageTypeArabic].location != NSNotFound)
-    {
-        return @"3";
-    }else
-    {
-        return @"2";
-    }
-}
-
-+ (NSString *)localIdentifier {
-    if ([[FSSharedLanguages SharedLanguage].language rangeOfString:FSSharedLanaguageTypeGerman].location != NSNotFound){
-        return FSSharedLanaguageTypeGerman;
-    }else if ([[FSSharedLanguages SharedLanguage].language rangeOfString:FSSharedLanaguageTypeTurkey].location != NSNotFound)
-    {
-        return @"tr_TR";
-    }else if ([[FSSharedLanguages SharedLanguage].language rangeOfString:FSSharedLanaguageTypeArabic].location != NSNotFound)
-    {
-        return @"ar";
-    }else if ([[FSSharedLanguages SharedLanguage].language rangeOfString:FSSharedLanaguageTypeVietnamese].location != NSNotFound)
-    {
-        return @"";
-    }else if ([[FSSharedLanguages SharedLanguage].language rangeOfString:FSSharedLanaguageTypeMalay].location != NSNotFound)
-    {
-        return @"";
-    }else if ([[FSSharedLanguages SharedLanguage].language rangeOfString:FSSharedLanaguageTypeIndonesian].location != NSNotFound)
-    {
-        return @"";
-    }else if ([[FSSharedLanguages SharedLanguage].language rangeOfString:FSSharedLanaguageTypeThai].location != NSNotFound)
-    {
-        return @"";
-    }else if ([[FSSharedLanguages SharedLanguage].language rangeOfString:FSSharedLanaguageTypeChinese].location != NSNotFound)
-    {
-        return @"zh_CN";
-    }else{
-        return @"en_US";
-    }
-}
-
-+ (BOOL)systemIsArbicLanguage
-{
-    NSString* language=[[NSLocale preferredLanguages] objectAtIndex:0];
-    if ([language rangeOfString:@"ar"].location != NSNotFound) {
-        return YES;
-    }
-    return NO;
-}
-
 @end
