@@ -28,5 +28,5 @@ NO：自己设定
 ### 读取特定的语言的value
 
 ```
-    NSLog(@"%@",[FSSharedLanguages CustomLocalizedStringWithKey:@"keyaaa" LanaguageType:FSSharedLanaguageTypeChinese]);
+    NSLog(@"%@",[FSSharedLanguages CustomLocalizedStringWithKey:@"keyaaa" LanguageType:FSSharedLanaguageTypeChinese]);
 ```

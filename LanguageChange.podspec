@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LanguageChange"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "这是一个应用内切换语言的工具类."
 
   # This description is used to generate tags and improve search results.
